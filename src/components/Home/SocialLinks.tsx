@@ -17,7 +17,7 @@ const SocialLinks = () => {
   ];
 
   return (
-    <div className="fixed top-1/2 right-0 -translate-x-1/2 -translate-y-1/2 flex flex-col gap-[25px]">
+    <div className="fixed top-1/2 right-0 -translate-x-1/2 -translate-y-1/2 flex flex-col gap-[50px]">
       {links.map(({ Icon, link }, i) => (
         <Link key={i + "social"} href={link} className="socialIcon text-[50px]">
           <Icon />
