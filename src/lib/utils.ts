@@ -26,3 +26,30 @@ export const navLinks = [
     href: "#contact",
   },
 ];
+
+export const projectLinks = [
+  {
+    _id: "sfasfasdfd",
+    name: "Project example",
+    thumbnail:
+      "https://res.cloudinary.com/dqgynvtyz/image/upload/v1734883003/Nazmul_islam_sakib_utkykm.gif",
+    start_date: "2022-01-01",
+    end_date: "2022-02-01",
+    description: "project description",
+    tech_stack: ["Nextjs", "Tailwindcss", "Typescript"],
+    live_link: "https://github.com/sakibsarkar/nextjs-portfolio",
+    github_link: "https://github.com/sakibsarkar/nextjs-portfolio",
+  },
+  {
+    _id: "sfauusd",
+    name: "Project example",
+    thumbnail:
+      "https://res.cloudinary.com/dqgynvtyz/image/upload/v1734883003/Nazmul_islam_sakib_utkykm.gif",
+    start_date: "2022-01-01",
+    end_date: "2022-02-01",
+    description: "project description",
+    tech_stack: ["Nextjs", "Tailwindcss", "Typescript"],
+    live_link: "https://github.com/sakibsarkar/nextjs-portfolio",
+    github_link: "https://github.com/sakibsarkar/nextjs-portfolio",
+  },
+];

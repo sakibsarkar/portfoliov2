@@ -2,12 +2,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { TypeAnimation } from "react-type-animation";
+import SectionHeading from "../shared/SectionHeading";
 const AboutMe = () => {
   return (
     <section className="bg-[#1b1b1b] py-[100px]" id="about-me">
-      <h1 className="text-[45px] textShadow font-[700] text-mainTxt mx-auto text-center">
-        About me
-      </h1>
+      <SectionHeading heading={"About Me"} />
 
       <div className="w-[750px] mx-auto mt-[120px] flex items-start justify-between gap-[15px]">
         <div className="w-[300px] h-[300px] shrink-0">

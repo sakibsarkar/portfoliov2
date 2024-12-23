@@ -12,12 +12,12 @@ const Navbar = () => {
         Sakib {" < />"}
       </Link>
       <nav>
-        <ul className="flex items-center justify-start gap-[25px] text-white">
+        <ul className="flex items-center justify-start gap-[35px] text-white">
           {navLinks.map(({ href, name }, i) => (
             <li key={i + "link"}>
               <Link
                 href={href}
-                className={`text-[19px] font-[400] relative ${
+                className={`text-[16px] font-[400] relative uppercase ${
                   href === activePath
                     ? "activePath textShadow"
                     : "navRoute text-white"

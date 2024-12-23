@@ -79,6 +79,11 @@ body {
   }
 }
 
+.gridResponsive {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
 .titleText {
   font-size: 6rem;
   font-weight: 600;
