@@ -4,8 +4,8 @@ import SocialLinks from "./SocialLinks";
 
 const Banner = () => {
   return (
-    <section className="w-full h-[80vh] relative flex items-center overflow-hidden">
-      <div className="relative z-[2] px-[80px]">
+    <section className="site_layout h-[80vh] flex items-center overflow-hidden">
+      <div className="relative z-[2]">
         <h3 className="text-[30px] text-white">I&apos;M</h3>
         <h1 className="titleText leading-[99%]">SAKIB</h1>
         <p className="text-[44px] text-white">

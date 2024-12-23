@@ -4,7 +4,7 @@ import Link from "next/link";
 import { TypeAnimation } from "react-type-animation";
 const AboutMe = () => {
   return (
-    <section className="bg-[#1b1b1b] py-[100px]">
+    <section className="bg-[#1b1b1b] py-[100px]" id="about-me">
       <h1 className="text-[45px] textShadow font-[700] text-mainTxt mx-auto text-center">
         About me
       </h1>
@@ -32,7 +32,7 @@ const AboutMe = () => {
               "Tyring to master it",
             ]}
             wrapper="span"
-            className="text-mainTxt"
+            className="text-mainTxt text-[35px]"
             speed={50}
             repeat={Infinity}
           />
