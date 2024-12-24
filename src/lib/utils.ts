@@ -111,3 +111,39 @@ export const experiences = [
     skills: ["JavaScript", "React", "HTML", "CSS"],
   },
 ];
+
+export const blogs = [
+  {
+    _id: "1",
+    title: "Introduction to React",
+    content:
+      "React is a JavaScript library for building user interfaces. It allows developers to create large web applications that can update and render efficiently in response to data changes.",
+    description:
+      "React is a JavaScript library for building user interfaces. It allows developers to create large web applications that can update and render efficiently in response to data changes.",
+    thumbnail:
+      "https://res.cloudinary.com/dqgynvtyz/image/upload/v1735033426/react_bk6ry9.png",
+    createdAt: "2024-12-24T10:30:00Z",
+  },
+  {
+    _id: "2",
+    title: "Mastering Node.js",
+    content:
+      "Node.js is a runtime environment that lets you run JavaScript on the server side. It’s lightweight, efficient, and perfect for building scalable web applications.",
+    description:
+      "React is a JavaScript library for building user interfaces. It allows developers to create large web applications that can update and render efficiently in response to data changes.",
+    thumbnail:
+      "https://res.cloudinary.com/dqgynvtyz/image/upload/v1735033426/nodejs_bk6ry9.png",
+    createdAt: "2024-11-18T15:45:00Z",
+  },
+  {
+    _id: "3",
+    title: "Getting Started with TypeScript",
+    content:
+      "TypeScript is a strongly typed programming language that builds on JavaScript by adding static types. Learn the basics and how to use TypeScript to build robust applications.",
+    description:
+      "React is a JavaScript library for building user interfaces. It allows developers to create large web applications that can update and render efficiently in response to data changes.",
+    thumbnail:
+      "https://res.cloudinary.com/dqgynvtyz/image/upload/v1735033426/typescript_bk6ry9.png",
+    createdAt: "2024-10-05T09:20:00Z",
+  },
+];
