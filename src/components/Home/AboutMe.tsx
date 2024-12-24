@@ -5,10 +5,10 @@ import { TypeAnimation } from "react-type-animation";
 import SectionHeading from "../shared/SectionHeading";
 const AboutMe = () => {
   return (
-    <section className="bg-[#1b1b1b] py-[100px]" id="about-me">
+    <section className="bg-[#1b1b1b] py-[100px] px-[15px]" id="about-me">
       <SectionHeading heading={"About Me"} />
 
-      <div className="w-[750px] mx-auto mt-[120px] flex items-start justify-between gap-[15px]">
+      <div className="max-w-[850px] mx-auto mt-[120px] flex items-center lg:items-start justify-between flex-col lg:flex-row gap-[15px]">
         <div className="w-[300px] h-[300px] shrink-0">
           <Image
             width={300}

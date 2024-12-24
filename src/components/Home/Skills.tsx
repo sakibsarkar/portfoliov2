@@ -1,8 +1,12 @@
-import { skills } from "@/lib/utils";
+import { baseUrl } from "@/lib/utils";
+import { ISkill } from "@/type/skill";
 import Image from "next/image";
 import SectionHeading from "../shared/SectionHeading";
 
-const Skills = () => {
+const Skills = async () => {
+  const res = await fetch(`${baseUrl}/skill/get`);
+  const data = (await res.json()) as { data: ISkill[] };
+
   const getExpertise = (expertice: number) => {
     // 0-50 > Beginner
     // 50-75 > Intermediate
@@ -19,8 +23,8 @@ const Skills = () => {
   return (
     <section className="bg-[#1b1b1b] py-[100px]" id="skills">
       <SectionHeading heading={"My Skills"} />
-      <div className="grid grid-cols-4 gap-[15px] center max-w-[1000px] mx-auto px-[15px] mt-[80px]">
-        {skills.map((skill, i) => {
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-[15px] center max-w-[1000px] mx-auto px-[15px] mt-[80px]">
+        {data?.data?.map((skill, i) => {
           const expertise = getExpertise(skill.expertise);
           return (
             <div

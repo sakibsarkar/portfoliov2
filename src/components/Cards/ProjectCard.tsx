@@ -20,7 +20,7 @@ const ProjectCard: React.FC<IProps> = ({ project }) => {
       </div>
       <div className="p-[10px] flex flex-col gap-[10px]">
         <Link
-          href={project.live_link}
+          href={`/project/${project._id}`}
           className="text-[#282828] font-[700] text-[20px] line-clamp-2 h-[60px] hover:underline"
         >
           {project.name}

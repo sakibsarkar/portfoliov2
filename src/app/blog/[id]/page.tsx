@@ -1,18 +1,26 @@
-import { blogs } from "@/lib/utils";
+import GoBack from "@/components/uiElements/GoBack";
+import { baseUrl } from "@/lib/utils";
+import { IBlog } from "@/type/blog";
 import { format } from "date-fns";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
-const page = ({ params }: { params: { id: string } }) => {
-  const blog = blogs.find((post) => post._id === params.id);
-
+const page = async ({ params }: { params: Promise<{ id: string }> }) => {
+  const paramsData = await params;
+  const res = await fetch(`${baseUrl}/blog/get/${paramsData.id}`);
+  const data = (await res.json()) as { data: IBlog };
+  const blog = data?.data;
   if (!blog) {
     notFound();
   }
   return (
     <article className="w-full py-12 md:py-24 lg:py-32 bg-[#0d1117]">
       <div className="site_layout px-4 md:px-6">
-        <div className="w-full h-[600px] center relative mb-8 rounded-lg overflow-hidden bg-[#292929]">
+        <GoBack className="mb-8" />
+        <h1 className="text-[20px] md:text-[20px] lg:text-[30px] font-bold tracking-tighter mb-6 text-white">
+          {blog.title}
+        </h1>{" "}
+        <div className="w-full h-[150px] sm:h-[300px] lg:h-[600px] center relative mb-8 rounded-lg overflow-hidden bg-[#292929]">
           <Image
             src={blog.thumbnail}
             alt={blog.title}
@@ -21,9 +29,6 @@ const page = ({ params }: { params: { id: string } }) => {
             className="w-full h-full object-contain"
           />
         </div>
-        <h1 className="text-3xl font-bold tracking-tighter mb-6 text-white">
-          {blog.title}
-        </h1>
         <p className="text-[#00ffff] mb-8">
           {format(new Date(blog.createdAt), "PP")}
         </p>
