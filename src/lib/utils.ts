@@ -22,6 +22,10 @@ export const navLinks = [
     href: "#projects",
   },
   {
+    name: "Skills",
+    href: "#skills",
+  },
+  {
     name: "Contact",
     href: "#contact",
   },
@@ -51,5 +55,32 @@ export const projectLinks = [
     tech_stack: ["Nextjs", "Tailwindcss", "Typescript"],
     live_link: "https://github.com/sakibsarkar/nextjs-portfolio",
     github_link: "https://github.com/sakibsarkar/nextjs-portfolio",
+  },
+];
+
+export const skills = [
+  {
+    label: "React",
+    image:
+      "https://res.cloudinary.com/dqgynvtyz/image/upload/v1735033426/react_bk6ry9.png",
+    expertise: 70,
+  },
+  {
+    label: "React",
+    image:
+      "https://res.cloudinary.com/dqgynvtyz/image/upload/v1735033426/react_bk6ry9.png",
+    expertise: 50,
+  },
+  {
+    label: "React",
+    image:
+      "https://res.cloudinary.com/dqgynvtyz/image/upload/v1735033426/react_bk6ry9.png",
+    expertise: 80,
+  },
+  {
+    label: "React",
+    image:
+      "https://res.cloudinary.com/dqgynvtyz/image/upload/v1735033426/react_bk6ry9.png",
+    expertise: 80,
   },
 ];
