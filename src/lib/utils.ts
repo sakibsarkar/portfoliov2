@@ -84,3 +84,30 @@ export const skills = [
     expertise: 80,
   },
 ];
+
+export const experiences = [
+  {
+    title: "Senior Full Stack Developer",
+    company: "TechCorp Solutions",
+    period: "2021 - Present",
+    description:
+      "Led development of multiple full-stack applications using React, Node.js, and TypeScript. Implemented microservices architecture and improved system performance by 40%.",
+    skills: ["React", "Node.js", "TypeScript", "MongoDB"],
+  },
+  {
+    title: "Full Stack Developer",
+    company: "WebDev Innovations",
+    period: "2019 - 2021",
+    description:
+      "Developed and maintained multiple client projects using MERN stack. Collaborated with design team to implement responsive UI/UX designs.",
+    skills: ["MongoDB", "Express", "React", "Node.js"],
+  },
+  {
+    title: "Junior Web Developer",
+    company: "StartUp Tech",
+    period: "2018 - 2019",
+    description:
+      "Assisted in developing front-end features using React and JavaScript. Participated in code reviews and implemented feedback from senior developers.",
+    skills: ["JavaScript", "React", "HTML", "CSS"],
+  },
+];
