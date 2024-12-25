@@ -1,10 +1,12 @@
 import { baseUrl } from "@/lib/utils";
-import { IProject } from "@/type/project";
+import { IProject } from "@/types/project";
 import ProjectCard from "../Cards/ProjectCard";
 import SectionHeading from "../shared/SectionHeading";
 
 const Projects = async () => {
-  const res = await fetch(`${baseUrl}/project/get`);
+  const res = await fetch(`${baseUrl}/project/get`, {
+    cache: "no-store",
+  });
   const data = (await res.json()) as { data: IProject[] };
 
   return (

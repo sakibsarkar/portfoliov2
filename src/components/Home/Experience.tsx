@@ -1,10 +1,12 @@
 import { baseUrl } from "@/lib/utils";
-import { IExperience } from "@/type/experience";
+import { IExperience } from "@/types/experience";
 import ExperinceCard from "../Cards/ExperinceCard";
 import SectionHeading from "../shared/SectionHeading";
 
 const Experience = async () => {
-  const res = await fetch(`${baseUrl}/experience/get`);
+  const res = await fetch(`${baseUrl}/experience/get`, {
+    cache: "no-store",
+  });
   const data = (await res.json()) as { data: IExperience[] };
 
   return (

@@ -1,10 +1,12 @@
 import { baseUrl } from "@/lib/utils";
-import { ISkill } from "@/type/skill";
+import { ISkill } from "@/types/skill";
 import Image from "next/image";
 import SectionHeading from "../shared/SectionHeading";
 
 const Skills = async () => {
-  const res = await fetch(`${baseUrl}/skill/get`);
+  const res = await fetch(`${baseUrl}/skill/get`, {
+    cache: "no-store",
+  });
   const data = (await res.json()) as { data: ISkill[] };
 
   const getExpertise = (expertice: number) => {

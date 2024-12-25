@@ -1,11 +1,13 @@
 import { baseUrl } from "@/lib/utils";
-import { IBlog } from "@/type/blog";
+import { IBlog } from "@/types/blog";
 import Link from "next/link";
 import BlogCard from "../Cards/BlogCard";
 import SectionHeading from "../shared/SectionHeading";
 
 const Blogs = async () => {
-  const res = await fetch(`${baseUrl}/blog/get`);
+  const res = await fetch(`${baseUrl}/blog/get`, {
+    cache: "no-store",
+  });
   const data = (await res.json()) as { data: IBlog[] };
   return (
     <section id="experience">

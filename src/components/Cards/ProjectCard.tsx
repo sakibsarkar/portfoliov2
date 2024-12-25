@@ -1,8 +1,9 @@
-import { IProject } from "@/type/project";
+import { IProject } from "@/types/project";
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import { IoCodeSlash } from "react-icons/io5";
+import { TbListDetails } from "react-icons/tb";
 interface IProps {
   project: IProject;
 }
@@ -47,6 +48,16 @@ const ProjectCard: React.FC<IProps> = ({ project }) => {
             <FaGithub className="text-[25px]" />
             <span className="hidden group-hover/github:block shrink-0">
               Github link
+            </span>
+          </Link>
+          <Link
+            href={`/project/${project._id}`}
+            className="w-[40px] h-[40px] center gap-[5px] bg-[#ebebeb] rounded-full hover:w-[121.594px] group/github p-[8px] overflow-hidden hover:text-black "
+            style={{ transition: "0.3s" }}
+          >
+            <TbListDetails className="text-[25px]" />
+            <span className="hidden group-hover/github:block shrink-0">
+              View details
             </span>
           </Link>
           <Link

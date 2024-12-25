@@ -1,13 +1,15 @@
 import GoBack from "@/components/uiElements/GoBack";
 import { baseUrl } from "@/lib/utils";
-import { IBlog } from "@/type/blog";
+import { IBlog } from "@/types/blog";
 import { format } from "date-fns";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
 const page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const paramsData = await params;
-  const res = await fetch(`${baseUrl}/blog/get/${paramsData.id}`);
+  const res = await fetch(`${baseUrl}/blog/get/${paramsData.id}`, {
+    cache: "no-store",
+  });
   const data = (await res.json()) as { data: IBlog };
   const blog = data?.data;
   if (!blog) {

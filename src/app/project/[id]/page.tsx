@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { baseUrl } from "@/lib/utils";
-import { IProject } from "@/type/project";
+import { IProject } from "@/types/project";
 import { ArrowLeft, Calendar, Globe } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
