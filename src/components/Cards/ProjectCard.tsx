@@ -1,4 +1,6 @@
+import { headVariants } from "@/animation";
 import { IProject } from "@/types/project";
+import * as motion from "framer-motion/client";
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
@@ -6,10 +8,12 @@ import { IoCodeSlash } from "react-icons/io5";
 import { TbListDetails } from "react-icons/tb";
 interface IProps {
   project: IProject;
+  index: number;
 }
-const ProjectCard: React.FC<IProps> = ({ project }) => {
+const ProjectCard: React.FC<IProps> = ({ project, index }) => {
+  const extraTime = (0.5 * index) / 2;
   return (
-    <div className="bg-white w-full">
+    <motion.div {...headVariants(0.5 + extraTime)} className="bg-white w-full">
       <div className="w-full h-[235px] bg-[#28282825] center">
         <Image
           src={project.thumbnail}
@@ -70,7 +74,7 @@ const ProjectCard: React.FC<IProps> = ({ project }) => {
           </Link>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

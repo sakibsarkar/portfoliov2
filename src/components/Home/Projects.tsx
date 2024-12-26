@@ -15,8 +15,8 @@ const Projects = async () => {
         <SectionHeading heading={"My Projects"} />
 
         <div className="gap-[25px] gridResponsive mt-[120px]">
-          {data?.data?.map((project) => (
-            <ProjectCard key={project._id} project={project} />
+          {data?.data?.map((project, i) => (
+            <ProjectCard index={i} key={project._id} project={project} />
           ))}
         </div>
       </div>

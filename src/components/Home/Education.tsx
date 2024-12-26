@@ -1,5 +1,6 @@
+import { headVariants } from "@/animation";
+import * as motion from "framer-motion/client";
 import Image from "next/image";
-
 const Education = () => {
   return (
     <div className="min-h-screen bg-black text-white px-4 md:px-8 py-[80px]">
@@ -15,7 +16,10 @@ const Education = () => {
         </p>
         <div className="w-full flex items-start justify-start gap-[15px] flex-col lg:flex-row">
           {/* Profile Image */}
-          <div className="w-[443px] h-[490px] shrink-0">
+          <motion.div
+            {...headVariants(0.5)}
+            className="w-full sm:w-[443px] aspect-[443/507] shrink-0"
+          >
             <Image
               src="/images/assets/me.jpg"
               alt="Profile photo"
@@ -23,13 +27,16 @@ const Education = () => {
               height={507}
               className="w-full h-full object-cover"
             />
-          </div>
+          </motion.div>
 
           {/* Content */}
           <div className="space-y-8 w-full">
             {/* Education Section */}
             <div className="space-y-6">
-              <div className="py-[15px] border-y-[1px] border-mainTxt">
+              <motion.div
+                {...headVariants(0.5)}
+                className="py-[15px] border-y-[1px] border-mainTxt"
+              >
                 <div className="flex items-start justify-between">
                   <h2 className="text-2xl font-semibold">
                     Diploma in Engineering (Architechture)
@@ -39,8 +46,11 @@ const Education = () => {
                 <p className="text-gray-400">
                   Shyamoli Ideal Polytechnic institute
                 </p>
-              </div>
-              <div className="py-[15px] border-b-[1px] border-mainTxt">
+              </motion.div>
+              <motion.div
+                {...headVariants(0.9)}
+                className="py-[15px] border-b-[1px] border-mainTxt"
+              >
                 <div className="flex items-start justify-between">
                   <h2 className="text-2xl font-semibold">
                     Secondary School Certificate (Secondary School Certificate)
@@ -48,7 +58,7 @@ const Education = () => {
                   <span className="text-gray-400">2021</span>
                 </div>
                 <p className="text-gray-400">MISSION INTERNATIONAL COLLEGE</p>
-              </div>
+              </motion.div>
             </div>
 
             {/* Why I chose Web Development Section */}

@@ -16,7 +16,7 @@ const Blogs = async () => {
         <div className="gap-[25px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  mt-[120px] mx-auto">
           {data?.data?.map((blog, i) => (
             <Link href={`/blog/${blog._id}`} key={i + "blog"}>
-              <BlogCard blog={blog} />
+              <BlogCard index={i} blog={blog} />
             </Link>
           ))}
         </div>

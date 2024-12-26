@@ -1,4 +1,6 @@
 "use client";
+import { opacityVariants } from "@/animation";
+import * as motion from "framer-motion/client";
 import Link from "next/link";
 import { useState } from "react";
 import { IoSend } from "react-icons/io5";
@@ -22,7 +24,7 @@ const Contact = () => {
   }
   return (
     <section className="w-full min-h-screen bg-[#1A1A1A] py-20 px-4">
-      <div className="site_layout">
+      <motion.div className="site_layout" {...opacityVariants()}>
         <h2
           className="text-4xl font-bold mb-2 text-white textShadow"
           style={{ color: "white !important" }}
@@ -124,7 +126,7 @@ const Contact = () => {
             </form>
           </Card>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
