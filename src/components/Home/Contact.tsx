@@ -23,7 +23,10 @@ const Contact = () => {
     form.reset();
   }
   return (
-    <section className="w-full min-h-screen bg-[#1A1A1A] py-20 px-4">
+    <section
+      id="contact"
+      className="w-full min-h-screen bg-[#1A1A1A] py-20 px-4"
+    >
       <motion.div className="site_layout" {...opacityVariants()}>
         <h2
           className="text-4xl font-bold mb-2 text-white textShadow"

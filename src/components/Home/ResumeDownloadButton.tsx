@@ -1,7 +1,7 @@
 "use client";
 const ResumeDownloadButton = () => {
   const handleDownload = async () => {
-    const fileUrl = "http://localhost:3000/file/nazmul_islam_sakib.pdf";
+    const fileUrl = `${window.location.origin}/file/nazmul_islam_sakib.pdf`;
 
     try {
       // Fetch the file

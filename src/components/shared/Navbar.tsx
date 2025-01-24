@@ -52,7 +52,7 @@ const Navbar = () => {
   }, [showSidebar]);
 
   return (
-    <header className="site_layout py-[30px] flex items-center justify-between">
+    <header className="site_layout py-[30px] flex items-center justify-between sticky top-0 z-[5] bg-transparent backdrop-blur-[5px]">
       <Link href={"/"} className="text-[25px] text-[#a4acb1]">
         Sakib {" < />"}
       </Link>
@@ -88,54 +88,54 @@ const Navbar = () => {
         >
           <IoMenu />
         </button>
-        {showSidebar ? (
-          <div className="myDrawer fixed inset-y-0 left-0 z-50 w-64 bg-gray-900 text-white shadow-lg transition-transform duration-300 ease-in-out transform translate-x-0">
-            <div className="p-4">
-              <div className="flex items-center justify-between mb-8">
-                <Link href={"/"} className="text-xl font-bold">
-                  Sakib {" < />"}
-                </Link>
-                <button
-                  onClick={sideBarToggle}
-                  className="text-white"
-                  aria-label="Close menu"
-                >
-                  <IoClose />
-                </button>
-              </div>
-              <ul className="space-y-4">
-                {navLinks.map(({ href, name }, i) => (
-                  <li key={i + "sidebar-link"}>
-                    <Link
-                      href={href}
-                      className={`block py-2 px-4 rounded transition-colors ${
-                        href === activePath
-                          ? "bg-gray-800 text-white"
-                          : "text-gray-300 hover:bg-gray-800 hover:text-white"
-                      }`}
-                      onClick={(e) => {
-                        setActivePath(href);
-                        if (href.startsWith("#")) {
-                          e.preventDefault();
-                          sideBarToggle();
-                          pageScroll(href);
-                          return;
-                        }
-                        sideBarToggle();
-                        return;
-                      }}
-                    >
-                      {name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+      </nav>{" "}
+      {showSidebar ? (
+        <div className="myDrawer fixed inset-y-0 left-0 h-dvh z-50 w-64 bg-gray-900 text-white shadow-lg transition-transform duration-300 ease-in-out transform translate-x-0">
+          <div className="p-4">
+            <div className="flex items-center justify-between mb-8">
+              <Link href={"/"} className="text-xl font-bold">
+                Sakib {" < />"}
+              </Link>
+              <button
+                onClick={sideBarToggle}
+                className="text-white"
+                aria-label="Close menu"
+              >
+                <IoClose />
+              </button>
             </div>
+            <ul className="space-y-4">
+              {navLinks.map(({ href, name }, i) => (
+                <li key={i + "sidebar-link"}>
+                  <Link
+                    href={href}
+                    className={`block py-2 px-4 rounded transition-colors ${
+                      href === activePath
+                        ? "bg-gray-800 text-white"
+                        : "text-gray-300 hover:bg-gray-800 hover:text-white"
+                    }`}
+                    onClick={(e) => {
+                      setActivePath(href);
+                      if (href.startsWith("#")) {
+                        e.preventDefault();
+                        sideBarToggle();
+                        pageScroll(href);
+                        return;
+                      }
+                      sideBarToggle();
+                      return;
+                    }}
+                  >
+                    {name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
-        ) : (
-          ""
-        )}
-      </nav>
+        </div>
+      ) : (
+        ""
+      )}
     </header>
   );
 };

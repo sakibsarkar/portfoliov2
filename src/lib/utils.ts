@@ -18,6 +18,10 @@ export const navLinks = [
     href: "#about-me",
   },
   {
+    name: "Experience",
+    href: "#experience",
+  },
+  {
     name: "Projects",
     href: "#projects",
   },

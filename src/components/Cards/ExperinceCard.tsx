@@ -7,7 +7,7 @@ import { Card, CardContent } from "../ui/card";
 const ExperinceCard = ({ experience }: { experience: IExperience }) => {
   return (
     <motion.div {...headVariants()}>
-      <Card className="bg-[#161b22] border-[#30363d]">
+      <Card className="bg-[#161b2283] border-[#30363d] backdrop-blur-[25px]">
         <CardContent className="p-6">
           <div className="flex items-start gap-4">
             <div className="rounded-full p-2 bg-[#00ffff]/10">

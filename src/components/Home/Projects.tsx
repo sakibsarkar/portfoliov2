@@ -10,8 +10,9 @@ const Projects = async () => {
   const data = (await res.json()) as { data: IProject[] };
 
   return (
-    <section id="projects">
-      <div className="site_layout py-[100px]">
+    <section id="projects" className="relative">
+      <span className="w-[95%] sm:w-[400px] md:w-[500px] lg:w-[800px] aspect-video glow_gradient absolute position_center rounded-full z-[1] left-[-0%]"></span>
+      <div className="site_layout py-[100px] relative z-[2]">
         <SectionHeading heading={"My Projects"} />
 
         <div className="gap-[25px] gridResponsive mt-[120px]">
